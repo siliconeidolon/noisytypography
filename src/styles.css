@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  background: #c0c0c0;
+}
+
+.App {
+  font-family: monospace;
+  font-weight: bold;
+}
+
+.input-group {
+  padding-bottom: 1rem;
+}
+
+h1 {
+  margin: 0;
+  padding-bottom: 1rem;
+}
+
+button {
+  font-family: monospace;
+  font-weight: bold;
+  width: 100%;
+  padding: 0.5rem;
+  cursor: pointer;
+  border: none;
+  transition-duration: 0.25s;
+}
+
+button:hover {
+  background-color: lightgray;
+}
+
+button.palette-delete-btn,
+.palette-add-btn {
+  width: 20px;
+  padding: 0;
+  border: none;
+  margin-right: 0.25rem;
+}
+
+input[type="text"],
+input[type="number"] {
+  font-family: monospace;
+  font-weight: bold;
+  display: block;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-width: 1px;
+  border-color: black;
+  padding: 0.25rem;
+}
+
+input {
+  background-color: none;
+}
+
+input[type="color"] {
+  padding: 0;
+  width: 50px;
+  border: none;
+  background: transparent;
+}
+
+.canvas-container label {
+  display: block;
+  font-size: 0.75rem;
+  padding-bottom: 0.25rem;
+}
+
+.canvas-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.canvas-controls {
+  background: white;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0px 16px 10px 0px rgba(0, 0, 0, 0.09);
+}
+
+.canvas-preview {
+  box-shadow: 0px 16px 10px 0px rgba(0, 0, 0, 0.09);
+  max-width: 90vw;
+  max-height: 90vw;
+}
+
+.palette-item {
+  display: flex;
+  margin-bottom: 0.25rem;
+}
+
+.new-colour-container {
+  display: flex;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 800px) {
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+  }
+  .canvas-container {
+    flex-direction: row;
+  }
+  .canvas-controls {
+    max-height: 90vh;
+    overflow-y: auto;
+    margin-right: 1rem;
+    margin-bottom: 0;
+  }
+  .canvas-preview {
+    max-width: 90vw;
+    max-height: 90vw;
+    order: 1;
+  }
+}
